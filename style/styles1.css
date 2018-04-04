@@ -1,0 +1,30 @@
+.form-menu-heading{
+    margin-bottom: 30px;
+}
+
+.wrapper{
+    margin-top: 80px;
+    margin-bottom: 80px;
+}
+
+.form-menu {
+    max-width: 380px;
+    padding: 20px 35px 25px;
+    margin: 0 auto;
+    background-color: #fff;
+    border: 1px solid rgba(0, 0, 0, 1);
+}
+
+.btn{
+    border: none;
+    color: white;
+    padding: 15px 45px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
+.kotak{
+    border: solid 1px;
+}
