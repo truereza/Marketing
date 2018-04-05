@@ -38,7 +38,7 @@ include '../config.php';
             <div class="card-header"><b>Lantai 1</b></div>
             <div class="card-body">
                 <?php
-                $query = "SELECT * FROM head_kamar WHERE kd_lantai = 1";
+                $query = "SELECT * FROM head_kamar LIMIT 5";
                 $result = $koneksi->query($query);
 
                 while($row = $result->fetch_array())
@@ -61,14 +61,14 @@ include '../config.php';
             <div class="card-header"><b>Lantai 2</b></div>
             <div class="card-body">
             <?php
-                $query = "SELECT * FROM head_kamar WHERE kd_lantai = 2";
-                $result = $koneksi->query($query);
+                $queryB = "SELECT * FROM head_kamar ORDER BY kamar LIMIT 5,10";
+                $resultB = $koneksi->query($queryB);
                 
-                while($row = $result->fetch_array());
-                $rows[] = $row;
-                
-                foreach($rows as $row){
-                  if($row['no_pesan'] > 0){
+                while($rowB = $resultB->fetch_array())
+                $rowsB[] = $rowB;
+
+                foreach($rowsB as $rowB){
+                  if($rowB['no_pesan'] > 0){
                     echo '<img src="../img/twotada.png"/>';
                   }else{
                     echo '<img src="../img/twoada.png"/>';
